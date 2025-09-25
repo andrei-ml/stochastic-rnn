@@ -20,7 +20,7 @@ Intuitively, this means the SRNN not only predicts the expected next step in a s
 - **Stochastic RNN** using PyTorch 
 - **Utility functions** for loss, training and evaluation  
 - **Interactive notebook** for hands-on demonstration  
-- **Coming soon:** aplication to atmosperic data  
+- **Coming soon:** application to atmosperic data  
 
 ---
 
