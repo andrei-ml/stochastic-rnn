@@ -4,7 +4,10 @@ This repository provides a PyTorch implementation of a **Stochastic Recurrent Ne
 
 In short, the model assumes that the output at time $t$, $\mathbf{y}_t$, follows a multivariate normal distribution:
 
-${\mathbf{y}}_t \sim \mathcal{N}(~\mathbf{f}(\mathbf{x}_{t-1},\ldots,\mathbf{x}_{t-l})~,~\mathbf{\Sigma})$
+$$
+{\mathbf{y}}_t \sim \mathcal{N}(~\mathbf{f}(\mathbf{x}_{t-1},\ldots,\mathbf{x}_{t-l})~,~\mathbf{\Sigma})
+$$
+
 
 where $\mathbf{f}$ is the RNN function predicting the mean, and $\mathbf{\Sigma}$ is the covariance matrix. Both $\mathbf{f}$ and $\mathbf{\Sigma}$ are learned from the time series. In most cases, $\mathbf{x}$ and $\mathbf{y}$ are the same data, modeling the stochastic dynamics of the observed sequence.
 
