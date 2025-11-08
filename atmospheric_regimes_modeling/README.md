@@ -11,7 +11,7 @@ The python scripts are splitted into steps which should be run sequentially. The
 To run them, additional packages are needed:
 
 ```bash
-pip install scikit-learn xarray joblib
+pip install scikit-learn xarray joblib pandas
 ```
 
 ## Step 1: Data prepapration and preprocessing

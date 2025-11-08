@@ -36,7 +36,7 @@ def old_load_and_prepare_data_v1(data_path, year1, year2):
     season_years=np.array(season_years)
     day_of_season_year=np.arange(N)+1
 
-    # Return as new 4D dataset
+    # Return new 4D dataset
     ds_new = xr.Dataset(
     data_vars=dict(zg_a=(['season_year', 'day_of_season_year', 'lat', 'lon'], data),),
     coords=dict(season_year=season_years,day_of_season_year=day_of_season_year,lat=ds['lat'],lon=ds['lon']),
