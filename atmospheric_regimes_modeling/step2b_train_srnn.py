@@ -5,7 +5,7 @@ os.environ["OMP_NUM_THREADS"] = "1"
 
 import numpy as np, scipy, torch
 torch.set_default_dtype(torch.float64)
-# can be omitted or changed to the preferred Tensors precision
+# can be omitted or changed to the preferred precision
  
 from single_train import single_train
 

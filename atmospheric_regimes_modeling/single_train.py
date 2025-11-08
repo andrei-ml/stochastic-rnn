@@ -20,7 +20,7 @@ except ImportError:
 
 def single_train(input_ts,target_ts,options={'m': 2, 'lag': 1, 'nfold': 1, 'nfolds':5,'init_length': 61}):  
     '''
-    Performs a single training and returns dictionary with the results.
+    Performs a single training and returns dictionary with the results
     '''
     #Specify the changeable parameters 
     m=options['m'] 
