@@ -78,8 +78,7 @@ stochastic-rnn/
 ---
 
 ## 📝 TODOs
-
-- [ ] Upload application to emulation of atmospheric regimes  
+  
 - [ ] Expand this README with additional experiments and results  
 - [ ] Add detailed usage instructions for model customization  
 
