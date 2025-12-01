@@ -223,13 +223,13 @@ if __name__=='__main__':
     # And the path to the folder for the prepared data (should exist)
     prepared_data_path=os.path.expanduser('~/data/srnn_data/MPI-ESM')
 
-    #ds=load_and_prepare_data(data_path,2276,2349)
-    #evaluation_ds=load_and_prepare_data(data_path,2198,2271)
+    ds=load_and_prepare_data(data_path,2198,2273)
+    evaluation_ds=load_and_prepare_data(data_path,2274,2349)
     
-    #ds.to_netcdf(os.path.join(prepared_data_path,'prepared_training_data.nc'))
-    ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_training_data.nc'))
-    #evaluation_ds.to_netcdf(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
-    evaluation_ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
+    ds.to_netcdf(os.path.join(prepared_data_path,'prepared_training_data.nc'))
+    #ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_training_data.nc'))
+    evaluation_ds.to_netcdf(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
+    #evaluation_ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
     
     data=ds['zg_a'].values
 
