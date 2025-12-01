@@ -17,8 +17,8 @@ def make_ts_of_inputs_and_targets(pcs,kpcs):
 
 if __name__=='__main__':
     n_jobs=int(sys.argv[1])
-    prepared_data_path=os.path.expanduser('~/data/srnn_data/MPI-ESM')
-    trained_srnn_parameters_file=os.path.join(prepared_data_path,'trained_srnn_parameters_2b.pkl')
+    processed_data_path=os.path.expanduser('~/data/srnn_data/MPI-ESM')
+    trained_srnn_parameters_file=os.path.join(processed_data_path,'trained_srnn_parameters_2b.pkl')
 
     # define option list to parallel
     options_list=[]
@@ -81,7 +81,7 @@ if __name__=='__main__':
 
     def single_job(options, trained_srnn_parameters_file): 
         # load the training data
-        pcs,kpcs,init_length=joblib.load(os.path.join(prepared_data_path,'training_data.jpkl'))
+        pcs,kpcs,init_length=joblib.load(os.path.join(processed_data_path,'training_data.jpkl'))
         input_ts, target_ts=make_ts_of_inputs_and_targets(pcs,kpcs)        
         # train
         options={**options, **{'init_length':init_length}}

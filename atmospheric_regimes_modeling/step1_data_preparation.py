@@ -221,15 +221,15 @@ if __name__=='__main__':
     # Set path to the folder with the downloaded data files (should exist)
     data_path=os.path.expanduser('~/data/CMIP6.CMIP.MPI-M.MPI-ESM1-2-HR.piControl.r1i1p1f1.day.zg.gn')
     # And the path to the folder for the prepared data (should exist)
-    prepared_data_path=os.path.expanduser('~/data/srnn_data/MPI-ESM')
+    processed_data_path=os.path.expanduser('~/data/srnn_data/MPI-ESM')
 
     ds=load_and_prepare_data(data_path,2198,2273)
     evaluation_ds=load_and_prepare_data(data_path,2274,2349)
     
-    ds.to_netcdf(os.path.join(prepared_data_path,'prepared_training_data.nc'))
-    #ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_training_data.nc'))
-    evaluation_ds.to_netcdf(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
-    #evaluation_ds=xr.open_dataset(os.path.join(prepared_data_path,'prepared_evaluation_data.nc'))
+    ds.to_netcdf(os.path.join(processed_data_path,'prepared_training_data.nc'))
+    #ds=xr.open_dataset(os.path.join(processed_data_path,'prepared_training_data.nc'))
+    evaluation_ds.to_netcdf(os.path.join(processed_data_path,'prepared_evaluation_data.nc'))
+    #evaluation_ds=xr.open_dataset(os.path.join(processed_data_path,'prepared_evaluation_data.nc'))
     
     data=ds['zg_a'].values
 
@@ -248,8 +248,8 @@ if __name__=='__main__':
     pcs, kpcs = CP.transform(data)
     evaluation_pcs, evaluation_kpcs = CP.transform(evaluation_ds['zg_a'].values)
 
-    joblib.dump(CP,os.path.join(prepared_data_path,'CP.jpkl'))
-    joblib.dump((pcs,kpcs,init_length),os.path.join(prepared_data_path,'training_data.jpkl'))
-    joblib.dump((evaluation_pcs, evaluation_kpcs,init_length),os.path.join(prepared_data_path,'evaluation_data.jpkl'))
+    joblib.dump(CP,os.path.join(processed_data_path,'CP.jpkl'))
+    joblib.dump((pcs,kpcs,init_length),os.path.join(processed_data_path,'training_data.jpkl'))
+    joblib.dump((evaluation_pcs, evaluation_kpcs,init_length),os.path.join(processed_data_path,'evaluation_data.jpkl'))
 
 
