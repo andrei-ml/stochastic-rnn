@@ -25,7 +25,7 @@ if __name__=='__main__':
     nfolds=5
     for n in range(10):
         for m in range(1,25+1):
-            for lag in list(range(1,20))+[21,28,35,42,49,56]:
+            for lag in list(range(1,28+1)):
                 for nfold in range(nfolds):
                     options={'n':n,'m': m, 'lag': lag, 'nfold': nfold, 'nfolds':nfolds}
                     if options not in options_list: options_list.append(options)
@@ -38,12 +38,26 @@ if __name__=='__main__':
                 for nfold in range(nfolds):
                     options={'n':n,'m': m, 'lag': lag, 'nfold': nfold, 'nfolds':nfolds}
                     if options not in options_list: options_list.append(options)
-    for n in range(120):
+    for n in range(100):
         for m in [9,10,11,12,13,14,15]:
             for lag in range(1,20):                
                 for nfold in range(nfolds):
                     options={'n':n,'m': m, 'lag': lag, 'nfold': nfold, 'nfolds':nfolds}
                     if options not in options_list: options_list.append(options)
+
+    for n in range(200):
+        for m in [9,10,11,12,13,14,15]:
+            for lag in range(9,20):                
+                for nfold in range(nfolds):
+                    options={'n':n,'m': m, 'lag': lag, 'nfold': nfold, 'nfolds':nfolds}
+                    if options not in options_list: options_list.append(options)
+
+    for n in range(300):
+        for m in [10,11,12]:
+            for lag in range(10,18):                
+                for nfold in range(nfolds):
+                    options={'n':n,'m': m, 'lag': lag, 'nfold': nfold, 'nfolds':nfolds}
+                    if options not in options_list: options_list.append(options)                    
 
     # Read the previously existing results to avoid repeating them
     # The storage format is a single pickle file with multiple consecutive dumps
