@@ -14,7 +14,7 @@ To run them, additional packages are needed:
 pip install scikit-learn xarray joblib pandas
 ```
 
-## Step 1: Data prepapration and preprocessing
+## Step 1: Data preparation and preprocessing
 
 Here we assume that the following data was downloaded in a dedicated folder (see the script contetns to modify the folder name):
 

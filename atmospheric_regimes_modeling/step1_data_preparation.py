@@ -159,17 +159,15 @@ if __name__=='__main__':
     evaluation_ds=load_and_prepare_data(data_path,2274,2349)
     
     ds.to_netcdf(os.path.join(processed_data_path,'prepared_training_data.nc'))
-    #ds=xr.open_dataset(os.path.join(processed_data_path,'prepared_training_data.nc'))
     evaluation_ds.to_netcdf(os.path.join(processed_data_path,'prepared_evaluation_data.nc'))
-    #evaluation_ds=xr.open_dataset(os.path.join(processed_data_path,'prepared_evaluation_data.nc'))
-    
+
     data=ds['zg_a'].values
 
     # mask of missing pixels, here added for consistence
     nan_mask = np.isnan(data).any(axis=(0,1))
 
     # kernel parameter
-    sigma=0.4 #1.35*0.3=0.405
+    sigma=0.4 
 
     init_length=30+31 # Sep + Oct
     target_data=data[:,init_length:,:,:]
