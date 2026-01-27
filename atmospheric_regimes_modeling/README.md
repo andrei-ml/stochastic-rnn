@@ -8,6 +8,8 @@ In this folder we develop a pipeline to emulate the dynamics of atmosperic regim
 - We employ Kernel PCA to characterize the target atmospheric regimes, and aim to emulate them with SRNN
 - We construct SRNN using **jointly PCs and kernel PCs** and assess its performance
 
+- **Note:** to quickly look at the results, navigate to **step5_results.ipynb** in each dedicated folder.
+
 Inside each dedicated folder, the python scripts are splitted into steps which should be run sequentially. Their naming format is **step#***.
 
 To run them, additional packages are needed:
@@ -16,7 +18,7 @@ To run them, additional packages are needed:
 pip install scikit-learn xarray joblib pandas basemap
 ```
 
-**Note:** to quickly look at the results, navigate to **step5_results.ipynb** at the respective folder.
+
 
 ## Step 1: Data preparation and preprocessing
 
