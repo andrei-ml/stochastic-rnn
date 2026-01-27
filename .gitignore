@@ -2,4 +2,9 @@
 *.jpkl
 *.slurm
 *.out
+*.png
+err.*
+logs.*
+__pycache__
+*internal*
 

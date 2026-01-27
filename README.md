@@ -20,7 +20,7 @@ Intuitively, this means the SRNN not only predicts the expected next step in a s
 - **Stochastic RNN** using PyTorch 
 - **Utility functions** for loss, training and evaluation  
 - **Interactive notebook** for hands-on demonstration of **time series forecasting**
-- **Coming soon:** application to atmospheric data 
+- **Application to atmospheric data** 
 
 ---
 
@@ -72,7 +72,8 @@ stochastic-rnn/
 ├── pyproject.toml
 ├── README.md
 ├── src/                                  # Core SRNN model files
-└── quickstart_with_synthetic_example/    # Interactive Jupyter notebook demo
+├── quickstart_with_synthetic_example/    # Interactive Jupyter notebook demo
+└── atmospheric_regimes_modeling/    # Interactive Jupyter notebook demo
 ```
 
 ---
