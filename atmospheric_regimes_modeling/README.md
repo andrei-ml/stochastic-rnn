@@ -32,13 +32,13 @@ Here we assume that the following **ESM data** was downloaded in a dedicated fol
 
 Data preparation pipeline implemented (look the script for details):
 
- - Extracting the years 2276–2349, from the first April 1 to the last March 31 (73 years in total)
+ - Extracting the years 2274–2349, from the first April 1 to the last March 31 (75 years in total)
  - Selecting values at 100 hPa level and for latitudes north of 50° N
  - Removing March 31 from each leap year
  - Linear detrending
  - Subtracting a smoothed (15-day Gaussian) climatology
- - Training data: selecting batches of September–March intervals (212 days $\times$ 73) 
- - Evaluation data: repeat the above for the years 2198–2271
+ - Training data: selecting batches of September–March intervals (212 days $\times$ 75) 
+ - Evaluation data: repeat the above for the years 2198–2273
 
 Preprocessing:
 
