@@ -73,7 +73,7 @@ stochastic-rnn/
 ├── README.md
 ├── src/                                  # Core SRNN model files
 ├── quickstart_with_synthetic_example/    # Interactive Jupyter notebook demo
-└── atmospheric_regimes_modeling/    # Interactive Jupyter notebook demo
+└── atmospheric_regimes_modeling/         # Pipeline for atmospheric application
 ```
 
 ---
